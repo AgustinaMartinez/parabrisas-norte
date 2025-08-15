@@ -1,0 +1,60 @@
+---
+import Waves from "~/components/Waves.astro";
+
+const brands = [
+  {
+    id: "pilkington",
+    link: "https://www.pilkington.com/_externalBuilds/NSG.WCM.Pilkington.Core/css/img/rsz_pilkington_logo.png",
+  },
+  {
+    id: "favicur",
+    link: "https://favicur.com.ar/wp-content/uploads/2023/10/favicur.png",
+  },
+  {
+    id: "sekurit",
+    link: "https://www.saint-gobain-sekurit.com/sites/hps-mac3-sekurit-sekurit/themes/custom/sekurit/logo.svg",
+  },
+  {
+    id: "sitemp",
+    link: "https://sitemp.com.ar/wp-content/uploads/2025/03/logo_footer.png",
+  },
+];
+---
+
+<section
+  id="brands"
+  class="md:min-h-[calc(100vh-125px)] lg:min-h-[calc(100vh-125px)] flex flex-col justify-between pt-16"
+>
+  <div
+    class="px-8 md:px-24 lg:px-24 flex flex-col items-center justify-start text-center"
+  >
+    <h2
+      data-animate="fadeInLeft"
+      class="lg:text-6xl md:text-5xl text-4xl font-bold text-blue-dark"
+    >
+      Tu seguridad es nuestra prioridad
+    </h2>
+    <h2
+      data-animate="fadeInRight"
+      class="lg:text-6xl md:text-5xl text-4xl font-bold text-blue-dark"
+    >
+      Trabajamos con los mejores fabricantes
+    </h2>
+    <div
+      class="flex flex-col md:flex-row md:flex-wrap lg:flex-row items-center justify-center mt-20 lg:mt-14 gap-10"
+    >
+      {
+        brands.map((brand) => (
+          <img
+            src={brand.link}
+            alt={brand.id}
+            width="250px"
+            aria-label={brand.id}
+          />
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="w-full hidden md:block lg:block"><Waves /></div>
+</section>

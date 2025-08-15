@@ -1,0 +1,63 @@
+---
+import Banner from "~/components/Banner.astro";
+
+const insurances = [
+  {
+    id: "triunfo_seguros",
+    link: "https://triunfoseguros.com/wp-content/uploads/logo-blanco.png.webp",
+    alt: "Logo de Triunfo Seguros",
+  },
+  {
+    id: "parana_seguros",
+    link: "https://www.paranaseguros.com.ar/wp-content/uploads/2018/09/logo_nav-principal-pie.png",
+    alt: "Logo de Paraná Seguros",
+  },
+  {
+    id: "segunda_seguros",
+    link: "https://storage.googleapis.com/l2-designsystem-prod/logos-brand/SVG/l2-logo-hor-rbg-pos.svg",
+    alt: "Logo de la Segunda Seguros",
+  },
+  {
+    id: "caja_seguros",
+    link: "https://seguros.lacaja.com.ar/images/la-caja-logo.svg",
+    alt: "Logo de La Caja Seguros",
+  },
+];
+---
+
+<section
+  id="insurances"
+  class="lg:min-h-[calc(100vh-125px)] flex flex-col justify-between px-8 md:px-24 md:py-16 lg:px-40 bg-gradient-to-b from-slate-400 to-white"
+>
+  <div class="hidden md:block lg:block">
+    <Banner />
+  </div>
+  <div class="text-center mt-0 md:mt-20 lg:mt-0" data-animate="fadeInLeft">
+    <h1
+      class="text-3xl font-bold md:text-4xl bg-gradient-to-b from-blue-dark to-blue-900 bg-clip-text text-transparent"
+    >
+      Seguros del automotor
+    </h1>
+    <p class="font-medium text-lg text-blue-dark w-fill mt-4 md:w-full">
+      Somos proveedores directos para todas las compañías de seguros
+      automotrices, ofreciendo variedad y comodida geográfica, asegurando la
+      máxima calidad y confianza en cada trabajo.
+    </p>
+
+    <div
+      class="flex flex-row flex-wrap lg:flex-row items-center justify-center gap-10 mt-4"
+    >
+      {
+        insurances.map((insurance) => (
+          <img
+            src={insurance.link}
+            alt={insurance.alt}
+            width="150px"
+            aria-label={insurance.id}
+            class="p-4 shadow-2xl rounded-2xl h-32 w-40 object-contain bg-slate-400"
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

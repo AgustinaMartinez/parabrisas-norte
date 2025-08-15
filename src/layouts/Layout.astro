@@ -1,0 +1,92 @@
+---
+import { SEO } from "astro-seo";
+import { ClientRouter } from "astro:transitions";
+import "@styles/global.css";
+
+interface Props {
+  className?: string;
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  site?: string;
+  alt?: string;
+}
+
+const {
+  className = "",
+  title = "Parabrisas Norte",
+  description = "Parabrisas Norte: cristales para automóviles en Córdoba",
+  canonical = "https://www.parabrisasnortecba.com.ar",
+  ogImage = "/images/logo.webp",
+  site = "https://www.parabrisasnortecba.com.ar",
+  alt = "Logo de Parabrisas Norte",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="author" content="Parabrisas Norte" />
+    <meta
+      name="keywords"
+      content="parabrisas norte, parabrisas, parabrisas en cordoba, cambiar parabrisas, cambiar vidrios del auto"
+    />
+    <SEO
+      title={title}
+      description={description}
+      canonical={canonical}
+      noindex={false}
+      nofollow={false}
+      openGraph={{
+        basic: {
+          title,
+          type: "website",
+          image: ogImage,
+          url: canonical,
+        },
+        image: {
+          alt,
+          width: 1200,
+          height: 630,
+          url: ogImage,
+        },
+        optional: {
+          siteName: "Parabrisas Norte",
+          locale: "es_AR",
+          description,
+        },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        title,
+        description,
+        image: ogImage,
+        imageAlt: alt,
+        site,
+        creator: "Parabrisas Norte",
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.svg" }],
+      }}
+    />
+    <ClientRouter />
+    <script type="module" src="/scripts/init.js"></script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

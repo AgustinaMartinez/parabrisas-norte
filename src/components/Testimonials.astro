@@ -1,0 +1,24 @@
+---
+import TestimonialsCard from "~/components/TestimonialsCard.astro";
+import googleReviews from "~/content/googleReviews.json";
+const middle = Math.ceil(googleReviews.length / 2);
+const firstHalf = googleReviews.slice(0, middle);
+const secondHalf = googleReviews.slice(middle);
+---
+
+<div class="mt-6 mb-6 md:mb-0 lg:mb-0">
+  <TestimonialsCard
+    cards={firstHalf}
+    duration={25}
+    topPadding="pt-2"
+    bottomPadding="pb-4"
+  />
+
+  <TestimonialsCard
+    cards={secondHalf}
+    duration={25}
+    reverse={true}
+    topPadding="pt-0"
+    bottomPadding="pb-1"
+  />
+</div>

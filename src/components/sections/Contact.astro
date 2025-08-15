@@ -1,0 +1,68 @@
+---
+import Form from "~/components/Form.astro";
+import GoogleMaps from "~/components/GoogleMaps.astro";
+
+const message =
+  "Hola! Vengo de la página web, me interesa consultar por más información.";
+const whatsAppNumber = "+54 9 351 2462389";
+const phoneNumber = "+54 9 351 4705050";
+const phones = "351 4705050 / 7284662";
+---
+
+<section
+  class="lg:min-h-[calc(100vh-125px)] flex flex-col md:flex-col lg:flex-row justify-center lg:justify-around items-center gap-6 px-8 md:px-24 py-16 md:py-16 lg:py-0 lg:px-40"
+>
+  <div
+    class="flex flex-col gap-4 w-full lg:w-6/12 md:w-full mb-0 md:mb-6 lg:mb-0"
+  >
+    <div
+      class="flex flex-col items-center md:items-start lg:items-start justify-between"
+    >
+      <h1
+        class="text-3xl font-bold md:text-4xl text-blue-dark block md:hidden lg:hidden mb-4"
+      >
+        Datos de contacto
+      </h1>
+      <p
+        class="font-medium text-sm md:text-lg lg:text-2xl text-blue-dark flex items-center gap-2"
+      >
+        <img
+          src="https://img.icons8.com/?size=30&id=7880&format=png&color=1c398e"
+          alt="Icono de teléfono"
+          class="w-6 md:w-8 lg:w-8"
+        />
+        <a
+          href="https://maps.app.goo.gl/UJcR8xsEpK1c2Sc3A"
+          class="hover:underline"
+          >Juan B Justo 4667 (por colectora)
+        </a>
+      </p>
+      <p
+        class="font-medium text-sm md:text-lg lg:text-2xl text-blue-dark flex items-center gap-2"
+      >
+        <img
+          src="https://img.icons8.com/?size=30&id=78382&format=png&color=1c398e"
+          alt="Icono de teléfono"
+          class="w-6 md:w-8 lg:w-8"
+        />
+        <a href={`tel:${phoneNumber}`} class="hover:underline">{phones}</a>
+      </p>
+      <p
+        class="font-medium text-sm md:text-lg lg:text-2xl text-blue-dark flex items-center gap-2"
+      >
+        <img
+          src="https://img.icons8.com/?size=30&id=62855&format=png&color=1c398e"
+          alt="Icono de WhatsApp"
+          class="w-6 md:w-8 lg:w-8"
+        />
+        <a
+          class="hover:underline"
+          href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`}
+          target="_blank">{whatsAppNumber}</a
+        >
+      </p>
+    </div>
+    <GoogleMaps />
+  </div>
+  <Form />
+</section>

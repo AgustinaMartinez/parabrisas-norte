@@ -1,0 +1,178 @@
+---
+
+---
+
+<form
+  id="contact"
+  class="flex flex-col items-center text-sm text-slate-800"
+  data-animate="fadeInRight"
+>
+  <h1 class="text-4xl font-bold text-center text-blue-dark">
+    Cotizá tu parabrisas
+  </h1>
+  <p class="max-md:text-sm text-gray-500 mt-4 mb-6 text-center">
+    O envianos un mail con los datos a <a
+      href="mailto:parabrisasnorte@gmail.com"
+      class="text-indigo-800 hover:underline">parabrisasnorte@gmail.com</a
+    >
+  </p>
+
+  <div class="max-w-96 w-full px-4">
+    <label for="name" class="font-medium">Nombre y Apellido</label>
+    <div
+      class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-blue-dark transition-all overflow-hidden"
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M18.311 16.406a9.64 9.64 0 0 0-4.748-4.158 5.938 5.938 0 1 0-7.125 0 9.64 9.64 0 0 0-4.749 4.158.937.937 0 1 0 1.623.938c1.416-2.447 3.916-3.906 6.688-3.906 2.773 0 5.273 1.46 6.689 3.906a.938.938 0 0 0 1.622-.938M5.938 7.5a4.063 4.063 0 1 1 8.125 0 4.063 4.063 0 0 1-8.125 0"
+          fill="#475569"></path>
+      </svg>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        class="h-full px-2 w-full outline-none bg-transparent"
+        placeholder="Escribí tu nombre completo"
+        required
+      />
+    </div>
+
+    <label for="brand" class="font-medium mt-4">Marca del vehículo</label>
+    <div
+      class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-blue-dark transition-all overflow-hidden"
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 1930 1920"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        stroke="#475569"
+        stroke-width="100"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <g>
+          <path d="M1198.3 1238.7H721.7"></path>
+          <path d="M1227.9 1145.2H693"></path>
+          <path d="M424.1 1145.2H216.9"></path>
+          <path
+            d="M721.7 1238.7c0 89.8-72.8 162.6-162.6 162.6s-162.6-72.8-162.6-162.6c0-34.4 10.7-66.3 28.9-92.6 29.4-42.3 78.3-70 133.7-70 55.2 0 104 27.5 133.4 69.5 18.4 26.3 29.2 58.4 29.2 93.1z"
+          ></path>
+          <path
+            d="M1523.6 1238.7c0 89.8-72.8 162.6-162.6 162.6s-162.6-72.8-162.6-162.6c0-34.8 10.9-67.1 29.5-93.5 29.4-41.8 78.1-69.1 133.1-69.1s103.7 27.3 133.1 69.1c18.5 26.4 29.5 58.6 29.5 93.5z"
+          ></path>
+          <circle cx="559.1" cy="1238.7" r="81.3"></circle>
+          <circle cx="1360.9" cy="1238.7" r="81.3"></circle>
+          <path
+            d="M396.4 1238.7H216.9V889.2h138.9l190.1-243.4c20.1-25.8 51-40.8 83.6-40.8h487.8c34.8 0 67.6 16.2 88.8 43.8l173.8 226h259.8c34.9 0 63.2 28.3 63.2 63.3v300.6h-179.5"
+          ></path>
+          <path d="M1494 1145.2h209.1"></path>
+          <path d="M511.1 885.7h715.6l-147.2-189.4h-430z"></path>
+          <path d="M857.7 699.4v186.3"></path>
+          <path d="M1703.1 960h-143.2v82.1h143.2"></path>
+          <path d="M497.1 960h45.2"></path>
+        </g>
+      </svg>
+
+      <input
+        id="brand"
+        name="brand"
+        type="text"
+        class="h-full px-2 w-full outline-none bg-transparent"
+        placeholder="Ejemplo: Volkswagen"
+        required
+      />
+    </div>
+
+    <label for="modelYear" class="font-medium mt-4"
+      >Modelo y año del vehículo</label
+    >
+    <div
+      class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-blue-dark transition-all overflow-hidden"
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="#475569"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path
+          d="M19 4h-1V2h-2v2H8V2H6v2H5C3.9 4 3 4.9 3 6v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 16H5V10h14v10ZM5 8V6h14v2H5Z"
+        ></path>
+      </svg>
+      <input
+        id="modelYear"
+        name="modelYear"
+        type="text"
+        class="h-full px-2 w-full outline-none bg-transparent"
+        placeholder="Ejemplo: Gol Trend 2013"
+        required
+      />
+    </div>
+
+    <label for="message" class="font-medium mt-4">Mensaje</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="4"
+      class="w-full mt-2 p-2 bg-transparent border border-slate-300 rounded-lg resize-none outline-none focus:ring-2 focus-within:ring-blue-dark transition-all"
+      placeholder="Contanos si el vehículo tiene sensores, si es parabrisas/luneta/puerta, etc."
+      required></textarea>
+
+    <button
+      type="submit"
+      class="flex items-center justify-center gap-1 mt-5 bg-blue-dark text-white text-lg font-bold mx-auto py-1 px-6 border-8 border-double border-blue-dark rounded-full cursor-pointer hover:text-blue-dark hover:bg-transparent duration-500"
+    >
+      Enviar WhatsApp
+    </button>
+  </div>
+</form>
+
+<script>
+  const form = document.querySelector("form");
+
+  form?.addEventListener("submit", (event: SubmitEvent) => {
+    event.preventDefault();
+    sendWhatsApp(event);
+  });
+
+  function sendWhatsApp(event: SubmitEvent) {
+    event.preventDefault();
+
+    const name = (
+      document.getElementById("name") as HTMLInputElement
+    ).value.trim();
+    const brand = (
+      document.getElementById("brand") as HTMLInputElement
+    ).value.trim();
+    const modelYear = (
+      document.getElementById("modelYear") as HTMLInputElement
+    ).value.trim();
+    const message = (
+      document.getElementById("message") as HTMLInputElement
+    ).value.trim();
+
+    const phoneNumber = "+5493512462389";
+
+    const text = `Hola! Mi nombre es ${name}, vengo de la página web y quisiera cotizar lo siguiente:
+      
+      • Marca del vehículo: ${brand}
+      • Año y modelo del vehículo: ${modelYear}
+      • Mensaje: ${message}
+
+      Gracias!`;
+
+    const url = `https://api.whatsapp.com/send?phone=${encodeURIComponent(phoneNumber)}&text=${encodeURIComponent(text)}`;
+
+    window.open(url, "_blank");
+  }
+</script>

@@ -1,0 +1,107 @@
+---
+import Card from "~/components/Card.astro";
+
+const truckAndCarBrands = [
+  {
+    id: "Scania",
+    link: "https://www.scania.com/etc.clientlibs/scania-clientlibs/clientlibs/clientlib-site/resources/logotype/1.0.0/scania_wordmark/scania-wordmark-white.svg",
+  },
+  {
+    id: "Ford",
+    link: "https://www.ford.com.ar/content/ford/ar/es_ar/configuration/navigation-config/footer-config/jcr:content/footer/image1/image.imgs.full.high.png/1703001196502.png",
+  },
+  {
+    id: "Iveco",
+    link: "https://www.iveco.com/argentina/-/media/IVECOdotcom/Content/logo/iveco_logo_white.svg?iar=0&rev=-1",
+  },
+  {
+    id: "Volkswagen",
+    link: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/640px-Volkswagen_logo_2019.svg.png",
+  },
+  {
+    id: "Mercedes Benz",
+    link: "https://assets.oneweb.mercedes-benz.com/plugin/hp-assets/latest/images/brands/mercedes-benz/logo.svg",
+  },
+  {
+    id: "Renault",
+    link: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Renault_2021_Text.svg/640px-Renault_2021_Text.svg.png",
+  },
+  {
+    id: "Toyota",
+    link: "https://www.toyota.com.ar/images/logos/logo-toyota.svg",
+  },
+  {
+    id: "Volvo",
+    link: "https://www.volvocars.com/static/shared/images/volvo-spread-wordmark.svg",
+  },
+  {
+    id: "Fiat",
+    link: "https://www.fiat.com.ar/content/dam/fiat/nova_home/logos/logo_header_hub_fiat.svg",
+  },
+  {
+    id: "Chevrolet",
+    link: "https://www.chevrolet.com.ar/content/dam/chevrolet/sa/argentina/espanol/primary-navigation-icons/vsid-nav/chevrolet-bowtie-120.svg",
+  },
+  {
+    id: "Peugeot",
+    link: "https://www.peugeot.com.ar/content/dam/peugeot/master/home/peugeot-logo-alt.png",
+  },
+];
+---
+
+<section
+  class="lg:min-h-[calc(100vh-125px)] flex flex-col justify-between bg-gradient-to-t from-slate-400 to-white py-16 md:py-8 lg:py-16"
+>
+  <div data-animate="fadeInLeft" class="px-8 md:px-24 lg:px-40">
+    <h1
+      class="text-center text-3xl font-bold md:text-4xl my-8 lg:my-0 lg:mb-8 bg-gradient-to-b from-blue-dark to-blue-900 bg-clip-text text-transparent"
+    >
+      Nuestros servicios
+    </h1>
+    <div id="services" class="flex items-center justify-center gap-4 flex-wrap">
+      <Card
+        src="/images/5.webp"
+        alt="Camión de transporte"
+        title="Trabajamos con empresas de transporte"
+        description="Instalación profesional y rápida para flotas de camiones."
+      />
+
+      <Card
+        src="/images/1.webp"
+        alt="Automóvil"
+        title="Servicio para automóviles"
+        description="Cristales para todas las marcas y modelos."
+      />
+
+      <Card
+        src="/images/3.webp"
+        alt="Servicios adicionales"
+        title="Más que parabrisas"
+        description="Pulido de ópticas, polarizado y reemplazo de vidrios laterales."
+      />
+    </div>
+  </div>
+  <div class="flex flex-col">
+    <h4
+      class="text-center text-3xl font-bold md:text-4xl bg-gradient-to-b from-blue-dark to-blue-900 bg-clip-text text-transparent mt-8 md:mt-8 lg:mt-0"
+    >
+      Trabajamos con todas las marcas
+    </h4>
+    <ul
+      data-animate="fadeInRight"
+      class="flex flex-wrap items-center justify-center text-center gap-14 mt-8 text-2xl font-bold md:text-3xl text-blue-dark px-4 md:px-8 lg:px-0"
+    >
+      {
+        truckAndCarBrands.map((truckBrand) => (
+          <img
+            src={truckBrand.link}
+            alt={truckBrand.id}
+            width="70px"
+            aria-label={truckBrand.id}
+            class="object-contain w-16"
+          />
+        ))
+      }
+    </ul>
+  </div>
+</section>
