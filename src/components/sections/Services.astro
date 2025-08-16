@@ -88,12 +88,12 @@ const truckAndCarBrands = [
       Trabajamos con todas las marcas
     </h4>
     <ul
-      data-animate="fadeInRight"
       class="flex flex-wrap items-center justify-center text-center gap-14 mt-8 text-2xl font-bold md:text-3xl text-blue-dark px-4 md:px-8 lg:px-0"
     >
       {
         truckAndCarBrands.map((truckBrand) => (
           <img
+            data-animate="fadeInRight"
             src={truckBrand.link}
             alt={truckBrand.id}
             width="70px"
