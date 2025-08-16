@@ -67,7 +67,7 @@ html, body {
 }
 
 .primary-button {
-  @apply py-2 px-6 bg-blue-dark text-white text-2xl font-extrabold border-8 border-double border-blue-dark rounded-full cursor-pointer hover:text-blue-dark hover:bg-transparent duration-500
+  @apply py-2 px-6 bg-transparent md:bg-blue-dark text-white text-2xl flex justify-center font-extrabold border-8 border-double border-white md:border-blue-dark rounded-full cursor-pointer hover:text-blue-dark hover:bg-white duration-500
 }
 
 .secondary-button {
@@ -75,7 +75,7 @@ html, body {
 }
 
 .third-button {
-  @apply w-fit py-2 px-8 mt-8 bg-transparent text-white text-2xl font-extrabold  border-8 border-double border-white rounded-full cursor-pointer hover:text-blue-dark hover:bg-white duration-500
+  @apply py-2 px-8 mt-8 bg-transparent flex justify-center text-white text-2xl font-extrabold border-8 border-double border-white rounded-full cursor-pointer hover:text-blue-dark hover:bg-white duration-500
 }
 
 .icon-hover {

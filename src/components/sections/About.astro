@@ -4,32 +4,36 @@ const bullets = [
     id: "installation",
     text: "Instalación precisa y segura",
     icon: "https://img.icons8.com/?size=100&id=11151&format=png&color=1c398e",
-    marginLeft: "",
+    // marginLeft: "ml-[-1px]",
+    marginLeft: 0,
   },
   {
     id: "certified",
     text: "Productos homologados",
     icon: "https://img.icons8.com/?size=100&id=11159&format=png&color=1c398e",
-    marginLeft: "ml-4",
+    // marginLeft: "ml-[-1px]",
+    marginLeft: 0,
   },
   {
     id: "custom",
     text: "Atención personalizada",
     icon: "https://img.icons8.com/?size=100&id=364&format=png&color=1c398e",
-    marginLeft: "ml-8",
+    // marginLeft: "ml-[-8px]",
+    marginLeft: 0,
   },
   {
     id: "trajectory",
     text: "Confianza y trayectoria",
     icon: "https://img.icons8.com/?size=100&id=eAiyKBNLCaN6&format=png&color=1c398e",
-    marginLeft: "ml-16",
+    // marginLeft: "ml-[-11px]",
+    marginLeft: 0,
   },
 ];
 ---
 
 <section
   id="about"
-  class="lg:min-h-[calc(100vh-125px)] flex flex-col justify-between gap-6 px-8 md:px-24 md:py-16 lg:py-16 lg:px-40"
+  class="lg:min-h-[calc(100vh-125px)] flex flex-col justify-between gap-6 px-8 pt-12 md:px-24 md:py-16 lg:py-16 lg:px-40"
 >
   <div class="text-center">
     <h1
@@ -38,13 +42,13 @@ const bullets = [
       ¿Quiénes somos?
     </h1>
     <p class="font-medium text-lg text-blue-dark w-fill mt-8 md:w-full">
-      Somos una empresa familiar, nos dedicamos a la venta y colocación de
-      cristales de automotores en todas sus marcas. Trabajamos todas las líneas
-      de camiones, brindando un servicio de instalación especializado, con
-      productos homologados, lo cual nos garantiza la conformidad de nuestros
-      clientes. Contamos con más de 24 años de trayectoria que avalan nuestro
-      trabajo en el mercado junto a nuestros clientes que nos siguen eligiendo
-      años tras año.
+      Somos una empresa familiar con más de 24 años de experiencia en el rubro,
+      nos dedicamos a la venta y colocación de cristales de automotores en todas
+      sus marcas. Trabajamos todas las líneas de camiones, brindando un servicio
+      de instalación especializado, con productos homologados, lo cual nos
+      garantiza la conformidad de nuestros clientes. Nuestra trayectoria y la
+      confianza de quienes nos eligen año tras año avalan la calidad y el
+      compromiso que ponemos en cada trabajo.
     </p>
   </div>
   <div
@@ -56,10 +60,17 @@ const bullets = [
     >
       {
         bullets.map((bullet) => (
-          <li class="flex items-center justify-center lg:justify-start gap-4">
-            <img src={bullet.icon} alt="Icono del item" width="40px" />
+          <li
+            class={`flex items-center justify-start md:justify-center lg:justify-start gap-4 ${bullet.marginLeft} md:ml-0 lg:ml-0`}
+          >
+            <img
+              src={bullet.icon}
+              alt="Icono del item"
+              width="40px"
+              class="w-6 md:w-10 lg:w-10"
+            />
             <h3
-              class={`text-2xl md:text-3xl lg:text-3xl font-bold text-blue-dark `}
+              class={`text-lg md:text-3xl lg:text-3xl font-bold text-blue-dark `}
             >
               {bullet.text}
             </h3>
@@ -69,17 +80,17 @@ const bullets = [
     </ul>
     <div
       data-animate="fadeInRight"
-      class="flex flex-col items-center md:flex-row lg:flex-row gap-6"
+      class="flex flex-col items-center justify-center lg:justify-between md:flex-row lg:flex-row gap-6 w-full lg:w-fit"
     >
       <img
         src="/images/6.webp"
         alt="Pegando el parabrisas"
-        class="rounded-2xl w-80 h-96"
+        class="rounded-2xl w-full h-56 md:w-80 md:h-80 lg:h-96 object-cover"
       />
       <img
         src="/images/8.webp"
         alt="Pegando el parabrisas"
-        class="rounded-2xl w-80 h-96"
+        class="rounded-2xl w-full h-56 md:w-80 md:h-80 lg:h-96 object-cover"
       />
     </div>
   </div>

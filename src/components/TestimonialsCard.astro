@@ -18,24 +18,6 @@ const {
 const doubled = [...cards, ...cards];
 ---
 
-<style>
-  @keyframes marqueeScroll {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  .marquee-inner {
-    animation: marqueeScroll var(--marquee-duration, 25s) linear infinite;
-    will-change: transform;
-  }
-  .marquee-reverse {
-    animation-direction: reverse;
-  }
-</style>
-
 <div
   class="marquee-row w-full mx-auto max-w-screen md:max-w-3xl lg:max-w-6xl overflow-hidden relative"
 >
@@ -45,7 +27,7 @@ const doubled = [...cards, ...cards];
   </div>
 
   <div
-    class={`marquee-inner flex transform-gpu lg:min-w-[200%] ${topPadding} ${bottomPadding} ${reverse ? "marquee-reverse" : ""}`}
+    class={`marquee-inner flex transform-gpu min-w-[200%] ${topPadding} ${bottomPadding} ${reverse ? "marquee-reverse" : ""}`}
     style={{ "--marquee-duration": `${duration}s` }}
   >
     {
@@ -95,8 +77,65 @@ const doubled = [...cards, ...cards];
       ))
     }
   </div>
+
   <div
     class="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent"
   >
   </div>
 </div>
+
+<style>
+  @keyframes marqueeScroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .marquee-inner {
+    animation: marqueeScroll var(--marquee-duration, 20s) linear infinite;
+    will-change: transform;
+  }
+  .marquee-reverse {
+    animation-direction: reverse;
+  }
+</style>
+
+<script>
+  (() => {
+    const SPEED = 200;
+    const recalc = () => {
+      const marquee = document.querySelector<HTMLElement>(".marquee-inner");
+      if (!marquee) return;
+      const distance = marquee.scrollWidth / 2;
+      const duration = distance / SPEED;
+      marquee.style.setProperty("--marquee-duration", `${duration}s`);
+    };
+
+    window.addEventListener("load", () => {
+      const imgs = Array.from(
+        document.querySelectorAll<HTMLImageElement>(".marquee-inner img")
+      );
+      const pending = imgs.filter((img) => !img.complete);
+
+      if (pending.length === 0) recalc();
+      else {
+        let done = 0;
+        const check = () => {
+          if (++done === pending.length) recalc();
+        };
+        pending.forEach((img) => {
+          img.addEventListener("load", check, { once: true });
+          img.addEventListener("error", check, { once: true });
+        });
+      }
+    });
+
+    let t: number | undefined;
+    window.addEventListener("resize", () => {
+      if (t) window.clearTimeout(t);
+      t = window.setTimeout(recalc, 100);
+    });
+  })();
+</script>

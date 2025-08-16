@@ -30,18 +30,18 @@ const brands = [
   >
     <h2
       data-animate="fadeInLeft"
-      class="lg:text-6xl md:text-5xl text-4xl font-bold text-blue-dark mb-4 md:mb-0 lg:mb-0"
+      class="lg:text-6xl md:text-5xl text-4xl font-bold text-blue-dark hidden md:block lg:block mb-0 md:mb-4 lg:mb-4"
     >
       Tu seguridad es nuestra prioridad
     </h2>
     <h2
       data-animate="fadeInRight"
-      class="lg:text-6xl md:text-5xl text-4xl font-bold text-blue-dark"
+      class="text-3xl md:text-5xl lg:text-6xl font-bold text-blue-dark"
     >
       Trabajamos con los mejores fabricantes
     </h2>
     <div
-      class="flex flex-col md:flex-row md:flex-wrap lg:flex-row items-center justify-center mt-20 lg:mt-14 gap-10"
+      class="flex flex-row flex-wrap items-center justify-center mt-14 md:mt-20 lg:mt-14 gap-10"
     >
       {
         brands.map((brand) => (
@@ -50,6 +50,7 @@ const brands = [
             alt={brand.id}
             width="250px"
             aria-label={brand.id}
+            class="w-32 md:w-3xs lg:w-3xs"
           />
         ))
       }

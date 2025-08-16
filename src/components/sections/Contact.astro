@@ -27,15 +27,15 @@ const phones = "351 4705050 / 7284662";
         class="font-medium text-sm md:text-lg lg:text-2xl text-blue-dark flex items-center gap-2"
       >
         <img
-          src="https://img.icons8.com/?size=30&id=7880&format=png&color=1c398e"
-          alt="Icono de teléfono"
+          src="https://img.icons8.com/?size=30&id=62855&format=png&color=1c398e"
+          alt="Icono de WhatsApp"
           class="w-6 md:w-8 lg:w-8"
         />
         <a
-          href="https://maps.app.goo.gl/UJcR8xsEpK1c2Sc3A"
           class="hover:underline"
-          >Juan B Justo 4667 (por colectora)
-        </a>
+          href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`}
+          target="_blank">{whatsAppNumber}</a
+        >
       </p>
       <p
         class="font-medium text-sm md:text-lg lg:text-2xl text-blue-dark flex items-center gap-2"
@@ -51,15 +51,15 @@ const phones = "351 4705050 / 7284662";
         class="font-medium text-sm md:text-lg lg:text-2xl text-blue-dark flex items-center gap-2"
       >
         <img
-          src="https://img.icons8.com/?size=30&id=62855&format=png&color=1c398e"
-          alt="Icono de WhatsApp"
+          src="https://img.icons8.com/?size=30&id=7880&format=png&color=1c398e"
+          alt="Icono de teléfono"
           class="w-6 md:w-8 lg:w-8"
         />
         <a
+          href="https://maps.app.goo.gl/UJcR8xsEpK1c2Sc3A"
           class="hover:underline"
-          href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`}
-          target="_blank">{whatsAppNumber}</a
-        >
+          >Juan B Justo 4667 (por colectora)
+        </a>
       </p>
     </div>
     <GoogleMaps />

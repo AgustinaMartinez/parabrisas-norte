@@ -115,7 +115,8 @@ const phoneNumber = "+5493517284662";
       });
     }
 
-    const navLinks = document.querySelectorAll('#navbar-sticky a[id^="link-"]');
+    if (!navbarSticky) return;
+    const navLinks = navbarSticky.querySelectorAll("a");
 
     navLinks.forEach((link) => {
       if (!link.hasAttribute("data-listener-attached")) {
@@ -139,7 +140,7 @@ const phoneNumber = "+5493517284662";
             window.location.href = href;
           }
 
-          if (navbarSticky && !navbarSticky.classList.contains("hidden")) {
+          if (!navbarSticky.classList.contains("hidden")) {
             navbarSticky.classList.add("hidden");
             const currentMenuButton = document.getElementById("menu-button");
             if (currentMenuButton) {

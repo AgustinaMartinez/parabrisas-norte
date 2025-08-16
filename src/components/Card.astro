@@ -3,7 +3,7 @@ const { src, alt, title, description } = Astro.props;
 ---
 
 <article
-  class="w-xs h-80 relative overflow-hidden rounded-lg shadow-md transition hover:shadow-lg"
+  class="w-xs h-50 md:h-80 lg:h-80 relative overflow-hidden rounded-lg shadow-md transition hover:shadow-lg"
 >
   <img
     alt={alt}
@@ -11,9 +11,9 @@ const { src, alt, title, description } = Astro.props;
     class="absolute inset-0 h-full w-full object-cover"
   />
   <div
-    class="relative bg-gradient-to-t from-gray-900/60 to-gray-900/40 h-full w-full flex items-end"
+    class="relative bg-gradient-to-b from-transparent to-black/90 h-full w-full flex items-end"
   >
-    <div class="p-4 sm:p-6 h-36">
+    <div class="p-4 sm:p-6 h-fit">
       <h3 class="mt-0.5 text-lg text-white font-bold">
         {title}
       </h3>
