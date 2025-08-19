@@ -4,7 +4,7 @@ import GoogleMaps from "~/components/GoogleMaps.astro";
 
 const message =
   "Hola! Vengo de la página web, me interesa consultar por más información.";
-const whatsAppNumber = "+54 9 351 2462389";
+const whatsAppNumber = "+5493512462389";
 const phoneNumber = "+54 9 351 4705050";
 const phones = "351 4705050 / 7284662";
 ---
@@ -33,7 +33,7 @@ const phones = "351 4705050 / 7284662";
         />
         <a
           class="hover:underline"
-          href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`}
+          href={`https://api.whatsapp.com/send?phone=${whatsAppNumber}&text=${message}`}
           target="_blank">{whatsAppNumber}</a
         >
       </p>
