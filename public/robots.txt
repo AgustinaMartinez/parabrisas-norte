@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.parabrisasnortecba.com.ar/sitemap.xml

@@ -2,14 +2,26 @@
 
 ---
 
-<section
-  id="hero"
-  class="relative w-full min-h-screen flex flex-col justify-center px-10 md:px-20 lg:px-40 bg-gradient-to-t from-blue-dark to-black md:from-white md:to-gray-light"
->
+<section id="hero" class="relative h-screen">
+  <img
+    src="/images/9.webp"
+    alt="Vista del local Parabrisas Norte en Córdoba"
+    aria-label="Vista del local Parabrisas Norte en Córdoba"
+    class="h-screen w-screen object-center overflow-hidden"
+    width="1920"
+    height="1080"
+    loading="lazy"
+  />
+
+  <div class="absolute inset-0 bg-black opacity-70 md:mt-0"></div>
+
   <div
-    class="flex flex-col md:flex-row lg:flex-row justify-between items-center mt-[120px]"
+    class="absolute inset-0 flex flex-col justify-around md:justify-center md:gap-8 items-center px-10 md:px-20"
   >
-    <div class="fadeInLeft flex flex-col gap-2 w-full md:w-[45%] lg:w-[45%]">
+    <div class="block md:hidden lg:hidden"></div>
+    <div
+      class="fadeInLeft flex flex-col gap-2 w-full md:w-[70%] md:mt-60 custom-shadow"
+    >
       <img
         src="/images/PARABRISAS_NORTE_BLANCO_2.png"
         alt="Logo de Parabrisas Norte"
@@ -18,28 +30,19 @@
         loading="lazy"
       />
       <h2
-        class="md:text-blue-dark text-white text-4xl lg:text-6xl md:text-4xl font-black hidden md:block lg:block"
+        class="text-white text-center text-4xl lg:text-7xl md:text-6xl font-black hidden md:block lg:block"
       >
         Venta y colocación de cristales para automotores
       </h2>
-      <span
-        class="text-slate-500 lg:text-2xl tracking-widest text-center md:text-left"
-      >
+      <span class="text-white lg:text-2xl tracking-widest text-center">
         +24 años en la industria. Trabajamos con todas las marcas.
       </span>
-      <a
-        href="#contact"
-        class="primary-button text-font-family flex self-center md:self-start mt-8 w-full md:w-fit lg:w-fit"
-      >
-        Cotizá ahora
-      </a>
     </div>
-    <img
-      src="/images/trucks.png"
-      alt="Vista de camiones con parabrisas nuevos a las afueras del local"
-      aria-label="Camiones con parabrisas nuevos"
-      class="hidden md:block lg:block object-cover w-[45%] custom-shadow fadeInRight"
-      loading="lazy"
-    />
+    <a
+      href="#contact"
+      class="primary-button text-font-family w-full md:w-fit lg:w-fit fadeInLeft custom-shadow"
+    >
+      Cotizá ahora
+    </a>
   </div>
 </section>
