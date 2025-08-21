@@ -15,12 +15,12 @@ interface Props {
 
 const {
   className = "",
-  title = "Parabrisas Norte",
-  description = "Parabrisas Norte: cristales para automóviles en Córdoba",
+  title = "Parabrisas Norte Córdoba",
+  description = "Cristales para automotores en Córdoba",
   canonical = "https://www.parabrisasnortecba.com.ar",
   ogImage = "/images/logo.webp",
   site = "https://www.parabrisasnortecba.com.ar",
-  alt = "Logo de Parabrisas Norte",
+  alt = "Parabrisas Norte Córdoba - Cristales para Automotores",
 } = Astro.props;
 ---
 
@@ -28,7 +28,7 @@ const {
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap.xml" />
     <meta name="generator" content={Astro.generator} />
@@ -72,7 +72,7 @@ const {
         creator: "Parabrisas Norte",
       }}
       extend={{
-        link: [{ rel: "icon", href: "/favicon.svg" }],
+        link: [{ rel: "icon", href: "/images/logo.webp" }],
       }}
     />
     <ClientRouter />
